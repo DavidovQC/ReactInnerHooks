@@ -1,18 +1,17 @@
 import { createContext } from "react";
-import { useState, useContext } from "react";
+import { useContext } from "react";
+import { AppContext } from "../src/AppContext";
 
 const CartContext = createContext();
 
 export default function Cart() {
-    const [quantity, setQuantity] = useState(0);
+    const data = useContext(AppContext);
 
     return (
-        <CartContext.Provider value={{ quantity, setQuantity }}>
-            <div>
-                <h4>Cart: {quantity}</h4>
-                <Component1></Component1>
-            </div>
-        </CartContext.Provider>
+        <div>
+            <h4>Cart: {data.quantity}</h4>
+            <Component1></Component1>
+        </div>
     );
 }
 
@@ -43,7 +42,7 @@ function Component3() {
 }
 
 function Counter() {
-    const data = useContext(CartContext);
+    const data = useContext(AppContext);
 
     function increment() {
         data.setQuantity(data.quantity + 1);
