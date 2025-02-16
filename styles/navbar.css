@@ -1,0 +1,22 @@
+/* NAVBAR */
+
+.navbar ul {
+    list-style-type: none;
+    background-color: aliceblue;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: hsl(15, 8%, 30%);
+    text-decoration: none;
+
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: rgb(91, 91, 246);
+}
+
+/* NAVBAR */
